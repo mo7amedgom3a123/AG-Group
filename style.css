@@ -1,0 +1,382 @@
+/* GENERAL RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  background: url(logos/page.png);
+}
+
+header {
+  background-color: #7b1e3d;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  color: white;
+}
+
+header .logo {
+  text-align: center;
+}
+
+.searchbox {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 25px;
+  padding: 5px;
+  margin-top: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 250px;
+}
+
+.searchbox input {
+  border: none;
+  outline: none;
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 25px;
+  width: 100%;
+}
+
+.searchbox button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  color: #7b1e3d;
+  font-size: 16px;
+}
+
+
+header .logo img {
+  width: 250px;
+  height: auto;
+}
+
+.labelcontainer .maintitle {
+  font-weight: bold;
+  font-size: 36px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.labelcontainer .subtitle {
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+  margin-top: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  color: #ffffff;
+  transition: 0.3s ease;
+}
+
+nav a:hover {
+  color: #f5f5dc;
+  text-decoration: underline;
+  transform: scale(1.2);
+}
+
+
+/* MAIN SECTION */
+.mainpage {
+  min-height: 100vh;
+  padding: 150px 5% 50px;
+  background: url(logos/page.png) no-repeat ;
+  display: block;
+  padding-top: 400px;
+}
+
+.mainpage .who {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.mainpage .slogan {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.mainpage .info {
+  font-size: 20px;
+  line-height: 1.6;
+  color: white;
+}
+
+/* PRODUCT SECTIONS */
+.page {
+  padding: 120px 5% 60px;
+  background: linear-gradient(to right, #002f6c, #7b1e3d);
+}
+
+.page .label {
+  background-color: #7b1e3d;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 30px;
+  max-width: 233px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.page .mainlabel {
+  background-color: #7b1e3d;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* CARDS */
+.product_container, .products_container, .rice_sugar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 5px;
+}
+
+.rice_sugar .card
+{
+  width: fit-content;
+  margin-bottom: 15px;
+}
+
+.rice_sugar .card img
+{
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  max-width: 233px;
+}
+
+.card:hover {
+  transform: scale(1.2);
+}
+
+.card img {
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card h5 {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* CONTACT SECTION */
+#contact {
+  padding: 100px 5% 60px;
+  background-color: #f7f7f7;
+  display: block;
+}
+
+#contact .label {
+  background-color: #7b1e3d;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#contact .card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: white;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+}
+
+#contact .card img {
+  width: 50px;
+  height: 50px;
+}
+
+#contact .card h3 {
+  margin: 0;
+}
+
+#contact .card p {
+  margin: 0;
+  font-size: 16px;
+}
+
+@media (max-width: 1280px)
+{
+   .card img {
+    height: 100%;
+  }
+}
+
+
+@media (max-width: 1024px)
+{
+  .card img {
+    height: 100%;
+  }
+}
+
+@media (max-width: 760px) {
+  header {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 15px 5%;
+    height: auto;
+  }
+
+  header .labelcontainer
+  {
+    width: 50%;
+  }
+
+  header .logo img
+  {
+    width: 165px;
+    height: auto;
+  }
+
+  nav {
+    flex-direction: row;
+    width: 100%;
+    margin-top: 10px;
+    gap: 10px;
+  }
+
+  .mainpage
+  {
+    margin-top: 50px;
+  }
+
+  .mainpage .slogan {
+    padding-top: 0;
+    font-size: 32px;
+  }
+
+  .mainpage .who {
+    font-size: 24px;
+  }
+
+  .mainpage .info {
+    font-size: 16px;
+  }
+
+  .page .label,
+  #contact .label {
+    font-size: 22px;
+  }
+
+  .card img {
+    height: 100%;
+  }
+
+  #contact .card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card:hover {
+  transform: scale(1.1);
+}
+
+  #contact .card img {
+    width: 40px;
+    height: 40px;
+  }
+
+  #contact .card h3 {
+    font-size: 18px;
+  }
+
+  #contact .card p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 496px)
+{
+  .product_container, .products_container, .rice_sugar
+  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  header .nav_search nav
+  {
+    gap: 20px;
+  }
+
+  .card
+  {
+    width: 100vw;
+  }
+
+  .page .label
+  {
+    width: 100vw;
+  }
+
+}
+
+@media (max-width: 350px)
+{
+  header .labelcontainer .maintitle
+  {
+    font-size: 30px;
+  }
+
+  header .a
+  {
+    font-size: 15px;
+  }
+}
